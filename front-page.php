@@ -23,11 +23,15 @@
     <div class="col">
       <?php echo $description?>
     </div>
+    
+    <?php if($link['url']) : ?>
     <div>
       <a class="btn btn-primary" href="<?php echo $link['url']?>"> 
-        <?php echo $link['title'];?>
-      </a>
+          <?php echo $link['title'];?>
+        </a>
     </div>
+    <?php endif;?>
+        
   </div>
 </div>
 <?php get_footer();?>
