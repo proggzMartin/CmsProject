@@ -2,17 +2,95 @@
 Theme name: Astroix
 Text Domain: NewTheme
 */
-
 body {
   background-color: rgb(71, 40, 0);
 }
 
-* {
-  color:#fff;
+header {
+  background-color: rgb(44, 25, 0);
+  height: 100px;
+  border-radius: 0px 50px;
 }
-
-#test {
-  background: #fff;
-  width: 100%;
+* {
+  color:rgb(19, 167, 0);
+}
+/* Reffered to by top-menu in header.php */
+header .top-bar {
+  /* get rid of bullets */
+  list-style: none; 
+  margin: 0px;
+  padding: 0px;
+  /* display items next to eachother instead of on top of eachother.*/
+  display: flex;
+}
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
 }
+header .top-bar li a {
+  padding: 0rem .5rem;
+  color:rgb(19, 167, 0);
+  text-decoration: none;
+}
+header .top-bar li a:hover {
+  text-decoration: underline;
+}
+header .top-bar li:first-child a {
+  padding-left: 0;
+}
+header .top-bar li:last-child a {
+  padding-right: 0;
+}
+
+/* DROPDOWN SUBMENU */
+/* This class is for dropdown on submenu's */
+header .top-bar li {
+  position: relative;
+}
+/* 
+  Class for submenus under a menu item. 
+  Do not display, only on hover AND when
+  has children (next class)
+*/
+header .top-bar li .sub-menu {
+  display: none;
+  position: absolute;
+  /* Top padding means it's placed right beneath parent */
+  top: 100%;
+  left: 0;
+  background: rgb(37, 21, 0);
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0;
+  list-style-type: none;
+  width: 200px;
+  border-radius: .5rem;
+  border-color: rgb(19, 167, 0);
+  border-width: 1px;
+  border-style: solid;
+  /* Menu always on top. */
+  z-index: 999;
+}
+/* Links inside menu */
+header .top-bar li .sub-menu a {
+  padding: .25rem;
+}
+
+/*  =================================== */
+/*  =======> 2nd level submenu <======= */
+
+/* Display 2nd level submenu only if it has children */
+header .top-bar > .menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
+/* Hovering second level menu */
+header .top-bar .sub-menu li .sub-menu {
+  left:100%;
+  top: 0%;
+  border-color: white;
+}
+header .top-bar .menu-item-has-children .sub-menu > .menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+/*  =================================== */
