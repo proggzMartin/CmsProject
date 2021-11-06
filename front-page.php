@@ -19,11 +19,11 @@
       <h1><?php echo $title?></h1>
     </div>
   </div>
-  <div class="row">
-    <div class="col">
+  <div class="row mt-3">
+    <div class="col-6">
       <?php echo $description?>
     </div>
-    
+
     <?php if($link['url']) : ?>
     <div>
       <a class="btn btn-primary" href="<?php echo $link['url']?>"> 
