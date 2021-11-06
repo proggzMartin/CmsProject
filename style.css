@@ -4,7 +4,11 @@ Text Domain: NewTheme
 */
 
 body {
-  background-color: hotpink;
+  background-color: rgb(71, 40, 0);
+}
+
+* {
+  color:#fff;
 }
 
 #test {
