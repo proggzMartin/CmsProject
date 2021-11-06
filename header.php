@@ -9,7 +9,13 @@
   <body <?php body_class();?>>
 
     <header>
-      
+      <!-- Create location for menus -->
+      <?php wp_nav_menu(
+        array(
+          //reference to register_nav_menus in functions-php.
+          'theme_location' => 'top-menu',
+        )
+      );?>
     </header>
 
     <div class="sticky-top container">

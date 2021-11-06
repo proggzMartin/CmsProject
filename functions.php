@@ -59,8 +59,11 @@ add_image_size('xsmall', 100, 100, true); //doesn't seem to work?
 add_image_size('small', 300, 300, true);
 add_image_size('large', 800, 800, true);
 
-//Display-locations alternatives
-//in the Appearance -> Menus -> Menu Settings
+
+//Menus ==========
+//Calling this method is required in order
+//to change menus in the admin-UI.
+//Found at admin-UI in the Appearance -> Menus -> Menu Settings
 register_nav_menus(
   array(
     'top-menu' => __('Top Menu', 'theme'),
