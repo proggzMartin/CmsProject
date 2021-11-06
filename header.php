@@ -15,6 +15,7 @@
           array(
             //reference to register_nav_menus in functions-php.
             'theme_location' => 'top-menu',
+            'menu_class' => 'top-bar'
           )
         );?>
       </div>

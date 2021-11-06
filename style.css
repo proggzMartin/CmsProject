@@ -16,3 +16,36 @@ header {
 * {
   color:#fff;
 }
+
+/* Reffered to by top-menu in header.php */
+header .top-bar {
+  /* get rid of bullets */
+  list-style: none; 
+  margin: 0px;
+  padding: 0px;
+  /* display items next to eachother instead of on top of eachother.*/
+  display: flex;
+}
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+header .top-bar li a {
+  padding: 1.25rem .5rem;
+  color:#fff;
+  text-decoration: none;
+}
+header .top-bar li a:hover {
+  text-decoration: underline;
+}
+header .top-bar li:first-child a {
+  padding-left: 0;
+}
+header .top-bar li:last-child a {
+  padding-right: 0;
+}
+
+
+
