@@ -70,3 +70,26 @@ register_nav_menus(
     'footer-menu' => __('Footer Menu', 'theme'),
   )
 );
+
+
+//Custom Post Types ----------------
+function my_first_post_type() {
+  //args has options for this post-type.
+  $args = array(
+    'labels' => array(
+      'name' => 'Cars', //Label in adminUI for PostType
+      'singular' => 'Car'
+    ),
+    'hierarchical' => true, //true for pages-behavior, false for post-behavior
+    'public' => true, //accessible by user on front- and back-end
+    'has_archive' => true, //has archive like posts do.
+    'menu_icon' => 'dashicons-buddicons-topics',//icon for adminUI-menu, found at https://developer.wordpress.org/resource/dashicons/#welcome-view-site
+    'support' => array('title', 'editor', 'thumbnail'), //Things to support for the user.
+    // 'rewrite' => array('slug' => 'my-cars'), //slug is the URL-path ending or so.
+  );
+  //wordpress funktion
+  register_post_type('cars', $args);
+}
+//hook innan page load, innan header loads. 
+//Vill ladda funktionen my_first_post_type, görs här
+add_action('init', 'my_first_post_type');
