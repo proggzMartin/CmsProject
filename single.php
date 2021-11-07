@@ -3,22 +3,29 @@
 <!-- Copied from page.php. for nbow. -->
 <?php get_header();?>
 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-auto">
-      <!-- Dynamic display of title set in WP -->
-      <h1><?php the_title();?></h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <?php if(has_post_thumbnail()):?>
-        <!-- 'small' is the size set in functions.php -->
-        <img src="<?php the_post_thumbnail_url('small');?>" class="img-fluid">
-      <?php endif;?>
-
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h1>
+        <?php single_cat_title();?>
+      </h1>
       <?php if(have_posts()) : while(have_posts()) : the_post();?>
-        <?php the_content();?>
+      <div class="card mt-3 newsCard">
+        <div class="card-header">
+          <h3>
+            <?php the_title();?>
+          </h3>
+        </div>
+        <div class="card-body">
+          <?php if(has_post_thumbnail()):?>
+            <!-- 'small' is the size set in functions.php -->
+            <img src="<?php the_post_thumbnail_url('small');?>" class="img-fluid">
+          <?php endif;?>
+
+          <?php the_content();?>
+        </div>
+      </div>
+        
       <?php endwhile; endif;?>
     </div>
   </div>

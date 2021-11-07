@@ -94,3 +94,11 @@ header .top-bar .menu-item-has-children .sub-menu > .menu-item-has-children:hove
   display: block;
 }
 /*  =================================== */
+
+
+div .newsCard {
+  background-color: rgb(44, 25, 0);
+  border-color: rgb(19, 167, 0);
+  border-top: 5px;
+  padding:1px;
+}
