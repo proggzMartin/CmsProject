@@ -62,15 +62,13 @@ add_image_size('large', 800, 800, true);
 
 //Menus ==========
 //Calling this method is required in order
-//to change menus in the admin-UI.
+//to change available menus in the admin-UI.
 //Found at admin-UI in the Appearance -> Menus -> Menu Settings
 register_nav_menus(
   array(
     'top-menu' => __('Top Menu', 'theme'),
-    'footer-menu' => __('Footer Menu', 'theme'),
   )
 );
-
 
 //Custom Post Types ----------------
 function oils_post_type() {

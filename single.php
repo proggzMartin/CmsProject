@@ -1,6 +1,4 @@
-<!-- for single blogpostss -->
-
-<!-- Copied from page.php. for nbow. -->
+<!-- For Regular posts -->
 <?php get_header();?>
 
 <div class="container mt-5 mb-5">

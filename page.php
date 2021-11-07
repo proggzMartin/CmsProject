@@ -2,10 +2,6 @@
 
 <?php get_header();?>
 
-<!-- standard page -->
-
-<?php get_header();?>
-
 <?php 
   $title = get_field('page_title');
   $description = get_field('page_description');

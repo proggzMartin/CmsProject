@@ -72,6 +72,9 @@ header .top-bar li .sub-menu {
   /* Menu always on top. */
   z-index: 999;
 }
+header .top-bar > .menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
 /* Links inside menu */
 header .top-bar li .sub-menu a {
   padding: .25rem;
@@ -79,11 +82,7 @@ header .top-bar li .sub-menu a {
 
 /*  =================================== */
 /*  =======> 2nd level submenu <======= */
-
 /* Display 2nd level submenu only if it has children */
-header .top-bar > .menu-item-has-children:hover > .sub-menu {
-  display: block;
-}
 /* Hovering second level menu */
 header .top-bar .sub-menu li .sub-menu {
   left:100%;
