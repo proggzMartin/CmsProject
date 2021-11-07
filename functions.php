@@ -93,3 +93,23 @@ function my_first_post_type() {
 //hook innan page load, innan header loads. 
 //Vill ladda funktionen my_first_post_type, görs här
 add_action('init', 'my_first_post_type');
+
+
+//TODO: Byt ut namnet
+//Taxonomy is like a category for a post type.
+function my_first_taxonomy() {
+  $args = array(
+    'labels' => array(
+      'name' => 'Brands', 
+      'singular_name' => 'Brand'
+    ),
+    'public' => true,
+    'hierarchical' => false,
+  );
+
+  //TODO: Byt ut array cars
+  //Array comes from last function (?)
+  //Means what kind of posttype we want to register to
+  register_taxonomy( 'brands', array('cars'), $args);
+}
+add_action('init', 'my_first_taxonomy');
