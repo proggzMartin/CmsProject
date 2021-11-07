@@ -10,28 +10,27 @@
 ?>
 
 <div class="container mt-5">
-  <div class="row">
-      <img class="img" style="height: 200px; width: 200px;" src="<?php echo $image;?>">
+  <div class="row justify-content-center">
+      
   </div>
-  <div class="row">
-    <div class="col">
+  <div class="row justify-content-start">
+    <div class="col-3 text-end">
+      <img class="img" style="height: 200px; width: 200px;" src="<?php echo $image;?>">
+    </div>
+    <div class="col-6">
       <!-- Dynamic display of title set in WP -->
       <h1><?php echo $title?></h1>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="col-6">
-      <?php echo $description?>
-    </div>
 
-    <?php if($link['url']) : ?>
-    <div>
-      <a class="btn btn-primary" href="<?php echo $link['url']?>"> 
-          <?php echo $link['title'];?>
-        </a>
+      <?php echo $description?>
+
+      <?php if($link['url']) : ?>
+        <div>
+          <a class="btn btn-primary" href="<?php echo $link['url']?>"> 
+            <?php echo $link['title'];?>
+          </a>
+        </div>
+      <?php endif;?>
     </div>
-    <?php endif;?>
-        
   </div>
 </div>
 <?php get_footer();?>
