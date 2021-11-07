@@ -6,7 +6,7 @@
   $description = get_field('page_description');
   $link = get_field('page_link');
   $imageArray = get_field('page_image');
-  $image = $imageArray['sizes']['small']; //var kommer den ifrån?
+  $image = $imageArray['sizes']['small'];
 ?>
 
 <div class="container mt-5">
