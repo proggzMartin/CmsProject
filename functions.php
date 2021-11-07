@@ -73,12 +73,12 @@ register_nav_menus(
 
 
 //Custom Post Types ----------------
-function my_first_post_type() {
+function oils_post_type() {
   //args has options for this post-type.
   $args = array(
     'labels' => array(
-      'name' => 'Cars', //Label in adminUI for PostType
-      'singular' => 'Car'
+      'name' => 'Oils', //Label in adminUI for PostType
+      'singular' => 'Oil'
     ),
     'hierarchical' => true, //true for pages-behavior, false for post-behavior
     'public' => true, //accessible by user on front- and back-end
@@ -88,28 +88,26 @@ function my_first_post_type() {
     // 'rewrite' => array('slug' => 'my-cars'), //slug is the URL-path ending or so.
   );
   //wordpress funktion
-  register_post_type('cars', $args);
+  register_post_type('oils', $args);
 }
 //hook innan page load, innan header loads. 
 //Vill ladda funktionen my_first_post_type, görs här
-add_action('init', 'my_first_post_type');
+add_action('init', 'oils_post_type');
 
 
-//TODO: Byt ut namnet
 //Taxonomy is like a category for a post type.
 function my_first_taxonomy() {
   $args = array(
     'labels' => array(
-      'name' => 'Brands', 
-      'singular_name' => 'Brand'
+      'name' => 'Oilvariants', 
+      'singular_name' => 'Oilvariant'
     ),
     'public' => true,
-    'hierarchical' => false,
+    'hierarchical' => true,
   );
 
-  //TODO: Byt ut array cars
   //Array comes from last function (?)
   //Means what kind of posttype we want to register to
-  register_taxonomy( 'brands', array('cars'), $args);
+  register_taxonomy( 'oilvariants', array('oils'), $args);
 }
 add_action('init', 'my_first_taxonomy');
