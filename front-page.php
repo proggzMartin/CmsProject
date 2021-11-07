@@ -6,15 +6,12 @@
   $description = get_field('page_description');
   $link = get_field('page_link');
   $imageArray = get_field('page_image');
-  $image = $imageArray['sizes']['large']; //var kommer den ifrån?
+  $image = $imageArray['sizes']['small']; //var kommer den ifrån?
 ?>
 
 <div class="container mt-5">
   <div class="row justify-content-center">
-      
-  </div>
-  <div class="row justify-content-start">
-    <div class="col-3 text-end">
+    <div class="col-auto text-end">
       <img class="img" style="height: 200px; width: 200px;" src="<?php echo $image;?>">
     </div>
     <div class="col-6">
