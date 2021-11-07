@@ -18,9 +18,9 @@
   <div class="row justify-content-center">
     <div class="col-auto">
       <div class="card mt-3 themeCard">
-        <div class="card-header">
+        <div class="card-header">´
+          <img src="<?php the_post_thumbnail_url('xsmall');?>" class="img-fluid">
           <h3>
-            <img src="<?php the_post_thumbnail_url('xsmall');?>" class="img-fluid">
             <?php the_title();?>
           </h3>
         </div>
