@@ -9,7 +9,7 @@
         <?php single_cat_title();?>
       </h1>
       <?php if(have_posts()) : while(have_posts()) : the_post();?>
-      <div class="card mt-3 newsCard">
+      <div class="card mt-3 themeCard">
         <div class="card-header">
           <h3>
             <?php the_title();?>

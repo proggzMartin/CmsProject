@@ -16,26 +16,20 @@
 
 <div class="container mt-5 mb-5">
   <div class="row justify-content-center">
-    <div class="col-auto text-end">
-      <?php if(!is_null($image)):?>
-        <img class="img" style="height: 200px; width: 200px;" src="<?php echo $image;?>">
-      <?php endif;?>
-    </div>
     <div class="col-auto">
-      <!-- Dynamic display of title set in WP -->
-      <h1><?php the_title();?></h1>
-
-      <?php if(have_posts()) : while(have_posts()) : the_post();?>
-        <?php the_content();?>
-      <?php endwhile; endif;?>
-
-      <?php if($link['url']) : ?>
-        <div>
-          <a class="btn btn-primary" href="<?php echo $link['url']?>"> 
-            <?php echo $link['title'];?>
-          </a>
+      <div class="card mt-3 themeCard">
+        <div class="card-header">
+          <h3>
+            <img src="<?php the_post_thumbnail_url('xsmall');?>" class="img-fluid">
+            <?php the_title();?>
+          </h3>
         </div>
-      <?php endif;?>
+        <div class="card-body">
+          <?php if(have_posts()) : while(have_posts()) : the_post();?>
+            <?php the_content();?>
+          <?php endwhile; endif;?>
+        </div>
+      </div>
     </div>
   </div>
 </div>

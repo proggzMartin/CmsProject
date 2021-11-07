@@ -10,7 +10,7 @@
         <?php single_cat_title();?>
       </h1>
       <?php if(have_posts()) : while(have_posts()) : the_post();?>
-      <div class="card mt-3 newsCard">
+      <div class="card mt-3 themeCard">
         <div class="card-header">
           <h3>
             <?php the_title();?>
@@ -19,13 +19,12 @@
         <div class="card-body">
           <?php if(has_post_thumbnail()):?>
             <!-- 'small' is the size set in functions.php -->
-            <img src="<?php the_post_thumbnail_url('small');?>" class="img-fluid">
+            <img style="width:200px; height: 200px;" src="<?php the_post_thumbnail_url('small');?>" class="img-fluid">
           <?php endif;?>
 
           <?php the_content();?>
         </div>
       </div>
-        
       <?php endwhile; endif;?>
     </div>
   </div>
