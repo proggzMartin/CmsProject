@@ -102,3 +102,10 @@ div .themeCard {
   border-top: 5px;
   padding:1px;
 }
+
+div .oilCard {
+  background-color: rgb(31, 2, 134);
+  border-color: rgb(19, 167, 0);
+  border-top: 5px;
+  padding:1px;
+}
