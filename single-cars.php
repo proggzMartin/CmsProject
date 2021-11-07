@@ -1,4 +1,6 @@
-<!-- Copied from page.php with a few changes. -->
+<!-- for single blogpostss -->
+
+<!-- Copied from page.php. for nbow. -->
 <?php get_header();?>
 
 <div class="container mt-5 mb-5">
@@ -15,16 +17,14 @@
           </h3>
         </div>
         <div class="card-body">
-          <img src="<?php the_post_thumbnail_url('xsmall');?>" class="img-fluid">
-          <?php the_excerpt();?>
-          <a href="<?php the_permalink();?>" 
-            class="btn btn-secondary mb-3"
-          >
-            Läs mer
-          </a>
+          <?php if(has_post_thumbnail()):?> 
+            <!-- 'small' is the size set in functions.php -->
+            <img style="width:200px; height: 200px;" src="<?php the_post_thumbnail_url('small');?>" class="img-fluid">
+          <?php endif;?>
+
+          <?php the_content();?>
         </div>
       </div>
-        
       <?php endwhile; endif;?>
     </div>
   </div>
